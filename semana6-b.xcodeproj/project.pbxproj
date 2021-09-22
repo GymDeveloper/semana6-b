@@ -13,6 +13,8 @@
 		B09FEECE26FBB290007744B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09FEECC26FBB290007744B3 /* Main.storyboard */; };
 		B09FEED026FBB294007744B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B09FEECF26FBB294007744B3 /* Assets.xcassets */; };
 		B09FEED326FBB294007744B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B09FEED126FBB294007744B3 /* LaunchScreen.storyboard */; };
+		B09FEEDF26FBB2CC007744B3 /* Animes.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09FEEDE26FBB2CC007744B3 /* Animes.swift */; };
+		B09FEEE126FBB400007744B3 /* AnimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B09FEEE026FBB400007744B3 /* AnimeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		B09FEECF26FBB294007744B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B09FEED226FBB294007744B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B09FEED426FBB294007744B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B09FEEDE26FBB2CC007744B3 /* Animes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animes.swift; sourceTree = "<group>"; };
+		B09FEEE026FBB400007744B3 /* AnimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,49 @@
 		B09FEEC526FBB290007744B3 /* semana6-b */ = {
 			isa = PBXGroup;
 			children = (
+				B09FEEDA26FBB29E007744B3 /* Main */,
 				B09FEEC626FBB290007744B3 /* AppDelegate.swift */,
 				B09FEEC826FBB290007744B3 /* SceneDelegate.swift */,
-				B09FEECA26FBB290007744B3 /* ViewController.swift */,
 				B09FEECC26FBB290007744B3 /* Main.storyboard */,
 				B09FEECF26FBB294007744B3 /* Assets.xcassets */,
 				B09FEED126FBB294007744B3 /* LaunchScreen.storyboard */,
 				B09FEED426FBB294007744B3 /* Info.plist */,
 			);
 			path = "semana6-b";
+			sourceTree = "<group>";
+		};
+		B09FEEDA26FBB29E007744B3 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B09FEEDD26FBB2AF007744B3 /* Model */,
+				B09FEEDC26FBB2A9007744B3 /* ViewModel */,
+				B09FEEDB26FBB2A5007744B3 /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B09FEEDB26FBB2A5007744B3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B09FEECA26FBB290007744B3 /* ViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B09FEEDC26FBB2A9007744B3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B09FEEE026FBB400007744B3 /* AnimeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B09FEEDD26FBB2AF007744B3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B09FEEDE26FBB2CC007744B3 /* Animes.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +177,8 @@
 			files = (
 				B09FEECB26FBB290007744B3 /* ViewController.swift in Sources */,
 				B09FEEC726FBB290007744B3 /* AppDelegate.swift in Sources */,
+				B09FEEDF26FBB2CC007744B3 /* Animes.swift in Sources */,
+				B09FEEE126FBB400007744B3 /* AnimeViewModel.swift in Sources */,
 				B09FEEC926FBB290007744B3 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
