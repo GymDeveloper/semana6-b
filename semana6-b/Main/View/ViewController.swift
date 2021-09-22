@@ -34,8 +34,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func setUpTable() {
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.isEditing = true
-        navigationItem.rightBarButtonItem = self.editButtonItem
+//        tableView.isEditing = true
+//        navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
     func bind() {
@@ -87,7 +87,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         if editingStyle == .delete {
             print(indexPath.row)
             // aca debo el codigo para borrar ese elemento
+        } else if editingStyle == .insert {
+            print(indexPath.row)
         }
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let contextItem = UIContextualAction(style: .normal, title: "Insertar") {  (contextualAction, view, boolValue) in
+              //Code I want to do here
+        }
+        
+        let contextItemDelete = UIContextualAction(style: .destructive, title: "Eliminar") {  (contextualAction, view, boolValue) in
+              //Code I want to do here
+        }
+        
+        let swipeActions = UISwipeActionsConfiguration(actions: [contextItem, contextItemDelete])
+
+        return swipeActions
     }
     
     
@@ -95,7 +116,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         print("movimiento")
     }
-
 
 }
 
